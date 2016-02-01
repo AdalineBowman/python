@@ -1,0 +1,43 @@
+import math
+class Vector(object):
+	def __init__(self, x, y):
+		self.x = x
+		self.y = y
+		self.tu = (x, y)
+	def __repr__(self):
+		print ("(%d, %d)" % (self.x, self.y))
+		return "(%d, %d)" % (self.x, self.y)
+	def __str__(self):
+		return ("(%d, %d)" % (self.x, self.y))
+	def __add__(self, other):
+		self.x += other.x
+		self.y += other.y
+		return self
+	def __mul__(self, other):
+		self.x *= other.x
+		self.y *= other.y
+		return self
+	def __sub__(self, other):
+		self.x -= other.x
+		self.y -= other.y
+		return self
+	def length(self):
+		self.len = math.sqrt(self.x**2 + self.y**2)
+		return self.len
+	def dot(self, other):
+		self.x *= other.x
+		self.y *= other.y
+		self.dot = (self.x + self.y)
+		return self.dot
+
+z = Vector(2, 2)
+v = Vector(2, 2)
+z + v
+print (z, v)
+z - v
+print (z)
+print (z.length())
+print (z * v)
+print (z.dot(v))
+print (Vector.dot(z, v))
+print (str(v))
