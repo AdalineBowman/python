@@ -1,0 +1,17 @@
+from random import randint
+
+num = randint(0, 10)
+it = 0
+while (True):
+	guess = int(input("take a guess:"))
+	if guess > num:
+		print ("Your guess is greater than I need")
+		it += 1
+	elif num > guess:
+		print ("Your guess is less than I need")
+		it += 1
+	elif guess == num:
+		print ("Your guess was right")
+		it += 1
+		print (str(it) + " times you miss")
+		break
