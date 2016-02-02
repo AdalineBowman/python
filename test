@@ -7,7 +7,7 @@ class count(unittest.TestCase):
         self.string = String('text, text simple, ok, and done')
  
     def test_count(self):
-        self.assertEqual(String, (30 TEXT 5))
+        self.assertEqual(String, (31 TEXT 6))
  
 if __name__ == '__main__':
     unittest.main()
