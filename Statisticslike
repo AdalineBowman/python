@@ -1,0 +1,35 @@
+class wordline(object):
+	def __init__(self, string):
+		self.string = string
+		self.realstring = self.string.readline()
+		self.emptystring = ""
+		self.tuple = {}
+	def count(self):
+		self.emptystring = self.realstring.split()
+		print (self.emptystring)
+		for i in self.emptystring:
+			c = self.emptystring.count(i)
+			self.tuple.update({i: c})
+		print (len(self.emptystring), max(self.tuple), len(self.realstring))
+			
+string = open("text.txt", "r")
+realstring = wordline(string)
+realstring.count()
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+string = open("text.txt", "r")
+ss = string.readline().upper()
+sss = ""
+ssss = {}
+char = 0
+print (ss)
+for i in ss:
+	char += 1
+	sss = ss.split()
+	for i in sss:
+		c = sss.count(i)
+		ssss.update({i: c})
+print (len(sss), max(ssss), char)
+string.close()
