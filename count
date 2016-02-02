@@ -1,0 +1,22 @@
+def count(string):
+	tuple = {}
+	with string as mylife:
+		data=mylife.read().upper().replace('\n', '')
+	for i in data.split():
+		c = data.count(i)
+		tuple.update({i: c})
+	print (len(data), max(tuple), len(tuple))
+			
+string = open("text.txt", "r")
+count(string)
+
+
+
+
+
+//////////////////////////
+
+import count
+
+string = open("text.txt", "r")
+count.count(string)
